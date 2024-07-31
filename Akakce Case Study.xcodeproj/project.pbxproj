@@ -17,6 +17,12 @@
 		2392A8F72C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */; };
 		2392A9062C5A8FCB000C0632 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */; };
 		2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */; };
+		2392A90B2C5A94C9000C0632 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A90A2C5A94C9000C0632 /* Networking */; };
+		2392A90D2C5A9AAC000C0632 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A90C2C5A9AAC000C0632 /* ProductListRepository.swift */; };
+		2392A9112C5A9B0F000C0632 /* ProductNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9102C5A9B0F000C0632 /* ProductNetworkModel.swift */; };
+		2392A9132C5A9B32000C0632 /* RatingNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9122C5A9B32000C0632 /* RatingNetworkModel.swift */; };
+		2392A9162C5A9C19000C0632 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9152C5A9C19000C0632 /* ProductListService.swift */; };
+		2392A9192C5A9DCA000C0632 /* ProductRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,11 @@
 		2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListBuilder.swift; sourceTree = "<group>"; };
+		2392A90C2C5A9AAC000C0632 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
+		2392A9102C5A9B0F000C0632 /* ProductNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkModel.swift; sourceTree = "<group>"; };
+		2392A9122C5A9B32000C0632 /* RatingNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingNetworkModel.swift; sourceTree = "<group>"; };
+		2392A9152C5A9C19000C0632 /* ProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
+		2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRoutes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2392A90B2C5A94C9000C0632 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +113,8 @@
 		2392A8D22C5A8ECF000C0632 /* Akakce Case Study */ = {
 			isa = PBXGroup;
 			children = (
+				2392A9172C5A9DBB000C0632 /* Network */,
+				2392A90E2C5A9AE2000C0632 /* Model */,
 				2392A9042C5A8FB1000C0632 /* Scenes */,
 				2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */,
 				2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */,
@@ -134,6 +148,8 @@
 			children = (
 				2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */,
 				2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */,
+				2392A90C2C5A9AAC000C0632 /* ProductListRepository.swift */,
+				2392A9152C5A9C19000C0632 /* ProductListService.swift */,
 			);
 			path = ProductListScene;
 			sourceTree = "<group>";
@@ -144,6 +160,31 @@
 				2392A9032C5A8FAA000C0632 /* ProductListScene */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2392A90E2C5A9AE2000C0632 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2392A90F2C5A9AE7000C0632 /* NetworkModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2392A90F2C5A9AE7000C0632 /* NetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				2392A9102C5A9B0F000C0632 /* ProductNetworkModel.swift */,
+				2392A9122C5A9B32000C0632 /* RatingNetworkModel.swift */,
+			);
+			path = NetworkModel;
+			sourceTree = "<group>";
+		};
+		2392A9172C5A9DBB000C0632 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +203,9 @@
 			dependencies = (
 			);
 			name = "Akakce Case Study";
+			packageProductDependencies = (
+				2392A90A2C5A94C9000C0632 /* Networking */,
+			);
 			productName = "Akakce Case Study";
 			productReference = 2392A8D02C5A8ECF000C0632 /* Akakce Case Study.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +278,9 @@
 				Base,
 			);
 			mainGroup = 2392A8C72C5A8ECF000C0632;
+			packageReferences = (
+				2392A9092C5A94C9000C0632 /* XCRemoteSwiftPackageReference "Networking" */,
+			);
 			productRefGroup = 2392A8D12C5A8ECF000C0632 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,9 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2392A9162C5A9C19000C0632 /* ProductListService.swift in Sources */,
+				2392A9112C5A9B0F000C0632 /* ProductNetworkModel.swift in Sources */,
 				2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */,
+				2392A9192C5A9DCA000C0632 /* ProductRoutes.swift in Sources */,
 				2392A8D42C5A8ECF000C0632 /* AppDelegate.swift in Sources */,
+				2392A9132C5A9B32000C0632 /* RatingNetworkModel.swift in Sources */,
 				2392A9062C5A8FCB000C0632 /* ProductListViewController.swift in Sources */,
+				2392A90D2C5A9AAC000C0632 /* ProductListRepository.swift in Sources */,
 				2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */,
 				2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */,
 			);
@@ -623,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2392A9092C5A94C9000C0632 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gungorbasa/Networking.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2392A90A2C5A94C9000C0632 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2392A9092C5A94C9000C0632 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2392A8C82C5A8ECF000C0632 /* Project object */;
 }
