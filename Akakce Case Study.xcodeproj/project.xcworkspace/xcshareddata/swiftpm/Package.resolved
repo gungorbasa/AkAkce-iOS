@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/gungorbasa/Networking.git",
       "state" : {
-        "revision" : "351af6f9fbfa764ee00a60d224a6e175fbe3953a",
-        "version" : "0.2.6"
+        "revision" : "363b63f1a260b267bc43ee4f84dd0bf38cef0594",
+        "version" : "0.2.7"
       }
     }
   ],
