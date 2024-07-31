@@ -12,7 +12,7 @@ struct Product: Equatable {
     let title: String
     let price: Double
     let description: String
-    let category: Category
+    let category: Category?
     let image: String
     let rating: Rating
 }

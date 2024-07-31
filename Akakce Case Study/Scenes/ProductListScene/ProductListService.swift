@@ -13,7 +13,7 @@ protocol ProductListService {
     func fetchHorizontalProducts() async throws -> [ProductNetworkModel]
 }
 
-final class ProductListServiceImp: ProductListService {
+actor ProductListServiceImp: ProductListService {
     private let network: Networking
     
     init(network: Networking) {
