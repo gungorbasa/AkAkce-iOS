@@ -23,6 +23,9 @@
 		2392A9132C5A9B32000C0632 /* RatingNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9122C5A9B32000C0632 /* RatingNetworkModel.swift */; };
 		2392A9162C5A9C19000C0632 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9152C5A9C19000C0632 /* ProductListService.swift */; };
 		2392A9192C5A9DCA000C0632 /* ProductRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */; };
+		2392A91C2C5A9F0E000C0632 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A91B2C5A9F0E000C0632 /* Category.swift */; };
+		2392A91E2C5AA004000C0632 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A91D2C5AA004000C0632 /* Rating.swift */; };
+		2392A9202C5AA07D000C0632 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A91F2C5AA07D000C0632 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		2392A9122C5A9B32000C0632 /* RatingNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingNetworkModel.swift; sourceTree = "<group>"; };
 		2392A9152C5A9C19000C0632 /* ProductListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
 		2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRoutes.swift; sourceTree = "<group>"; };
+		2392A91B2C5A9F0E000C0632 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2392A91D2C5AA004000C0632 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		2392A91F2C5AA07D000C0632 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +152,10 @@
 		2392A9032C5A8FAA000C0632 /* ProductListScene */ = {
 			isa = PBXGroup;
 			children = (
-				2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */,
 				2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */,
 				2392A90C2C5A9AAC000C0632 /* ProductListRepository.swift */,
 				2392A9152C5A9C19000C0632 /* ProductListService.swift */,
+				2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */,
 			);
 			path = ProductListScene;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 		2392A90E2C5A9AE2000C0632 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2392A91A2C5A9EEE000C0632 /* DomainModel */,
 				2392A90F2C5A9AE7000C0632 /* NetworkModel */,
 			);
 			path = Model;
@@ -185,6 +192,16 @@
 				2392A9182C5A9DCA000C0632 /* ProductRoutes.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2392A91A2C5A9EEE000C0632 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				2392A91B2C5A9F0E000C0632 /* Category.swift */,
+				2392A91F2C5AA07D000C0632 /* Product.swift */,
+				2392A91D2C5AA004000C0632 /* Rating.swift */,
+			);
+			path = DomainModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2392A91E2C5AA004000C0632 /* Rating.swift in Sources */,
 				2392A9162C5A9C19000C0632 /* ProductListService.swift in Sources */,
 				2392A9112C5A9B0F000C0632 /* ProductNetworkModel.swift in Sources */,
 				2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */,
@@ -333,6 +351,8 @@
 				2392A90D2C5A9AAC000C0632 /* ProductListRepository.swift in Sources */,
 				2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */,
 				2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */,
+				2392A91C2C5A9F0E000C0632 /* Category.swift in Sources */,
+				2392A9202C5AA07D000C0632 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
