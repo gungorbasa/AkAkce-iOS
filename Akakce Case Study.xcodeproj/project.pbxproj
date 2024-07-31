@@ -15,6 +15,8 @@
 		2392A8EB2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */; };
 		2392A8F52C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8F42C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift */; };
 		2392A8F72C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */; };
+		2392A9062C5A8FCB000C0632 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */; };
+		2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2392A8F02C5A8ED0000C0632 /* Akakce Case StudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Akakce Case StudyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2392A8F42C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyUITests.swift; sourceTree = "<group>"; };
 		2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		2392A8D22C5A8ECF000C0632 /* Akakce Case Study */ = {
 			isa = PBXGroup;
 			children = (
+				2392A9042C5A8FB1000C0632 /* Scenes */,
 				2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */,
 				2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */,
 				2392A8D72C5A8ECF000C0632 /* ViewController.swift */,
@@ -122,6 +127,23 @@
 				2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */,
 			);
 			path = "Akakce Case StudyUITests";
+			sourceTree = "<group>";
+		};
+		2392A9032C5A8FAA000C0632 /* ProductListScene */ = {
+			isa = PBXGroup;
+			children = (
+				2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */,
+				2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */,
+			);
+			path = ProductListScene;
+			sourceTree = "<group>";
+		};
+		2392A9042C5A8FB1000C0632 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2392A9032C5A8FAA000C0632 /* ProductListScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +278,9 @@
 			files = (
 				2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */,
 				2392A8D42C5A8ECF000C0632 /* AppDelegate.swift in Sources */,
+				2392A9062C5A8FCB000C0632 /* ProductListViewController.swift in Sources */,
 				2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */,
+				2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +459,6 @@
 				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,10 +468,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,7 +491,6 @@
 				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,10 +500,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
