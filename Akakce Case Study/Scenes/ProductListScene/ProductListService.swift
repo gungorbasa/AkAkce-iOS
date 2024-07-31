@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-protocol ProductListService {
+protocol ProductListService: Sendable {
     func fetchProducts() async throws -> [ProductNetworkModel]
     func fetchHorizontalProducts() async throws -> [ProductNetworkModel]
 }

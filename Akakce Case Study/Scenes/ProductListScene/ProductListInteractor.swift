@@ -1,5 +1,5 @@
 //
-//  ProductListRepository.swift
+//  ProductListInteractor.swift
 //  Akakce Case Study
 //
 //  Created by Gungor Basa on 7/31/24.
@@ -8,12 +8,12 @@
 import Foundation
 import Networking
 
-protocol ProductListRepository {
+protocol ProductListInteractor: Sendable {
     func fetchProducts() async throws -> [Product]
     func fetchHorizontalProducts() async throws -> [Product]
 }
 
-final class ProductListRepositoryImp: ProductListRepository {
+final class ProductListInteractorImp: ProductListInteractor {
     private let service: ProductListService
     
     init(service: ProductListService) {
