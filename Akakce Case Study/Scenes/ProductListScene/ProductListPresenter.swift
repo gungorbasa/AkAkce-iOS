@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ProductListPresenter: Sendable {
-    
+    @MainActor
+    func onViewDidLoad()
 }
 
 final class ProductListPresenterImp: ProductListPresenter {
@@ -23,7 +24,7 @@ final class ProductListPresenterImp: ProductListPresenter {
         Task {
             do {
                 let (products, horizontalProducts) =  try await fetchData()
-                
+                print(horizontalProducts)
             } catch {
                 print("Error: \(error.localizedDescription)")
             }

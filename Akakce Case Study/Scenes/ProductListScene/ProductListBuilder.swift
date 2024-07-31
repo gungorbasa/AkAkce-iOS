@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Networking
 
 enum ProductListBuilder {
     @MainActor 
     static func make() -> UIViewController {
-        return ProductListViewController(nibName: nil, bundle: nil)
+        let networking = NativeNetwork(decoder: .init())
+        let service = ProductListServiceImp(network: networking)
+        let interactor = ProductListInteractorImp(service: service)
+        let presenter = ProductListPresenterImp(interactor: interactor)
+        return ProductListViewController(presenter: presenter)
     }
 }

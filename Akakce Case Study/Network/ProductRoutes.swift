@@ -30,7 +30,7 @@ enum ProductRoutes: Routing {
             return [:]
         case .horizontalProduct:
             return ["limit": 5]
-        case .productDetails(let id):
+        case .productDetails:
             return [:]
         }
     }
