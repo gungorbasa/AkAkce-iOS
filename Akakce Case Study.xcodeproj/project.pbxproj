@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2392A8D42C5A8ECF000C0632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */; };
+		2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */; };
+		2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D72C5A8ECF000C0632 /* ViewController.swift */; };
+		2392A8DB2C5A8ECF000C0632 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DA2C5A8ECF000C0632 /* Base */; };
+		2392A8DD2C5A8ED0000C0632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */; };
+		2392A8E02C5A8ED0000C0632 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DF2C5A8ED0000C0632 /* Base */; };
+		2392A8EB2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */; };
+		2392A8F52C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8F42C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift */; };
+		2392A8F72C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2392A8E72C5A8ED0000C0632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2392A8C82C5A8ECF000C0632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2392A8CF2C5A8ECF000C0632;
+			remoteInfo = "Akakce Case Study";
+		};
+		2392A8F12C5A8ED0000C0632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2392A8C82C5A8ECF000C0632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2392A8CF2C5A8ECF000C0632;
+			remoteInfo = "Akakce Case Study";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2392A8D02C5A8ECF000C0632 /* Akakce Case Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Akakce Case Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2392A8D72C5A8ECF000C0632 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2392A8DA2C5A8ECF000C0632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2392A8DF2C5A8ED0000C0632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2392A8E12C5A8ED0000C0632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2392A8E62C5A8ED0000C0632 /* Akakce Case StudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Akakce Case StudyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyTests.swift; sourceTree = "<group>"; };
+		2392A8F02C5A8ED0000C0632 /* Akakce Case StudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Akakce Case StudyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2392A8F42C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyUITests.swift; sourceTree = "<group>"; };
+		2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Akakce_Case_StudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2392A8CD2C5A8ECF000C0632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8E32C5A8ED0000C0632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8ED2C5A8ED0000C0632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2392A8C72C5A8ECF000C0632 = {
+			isa = PBXGroup;
+			children = (
+				2392A8D22C5A8ECF000C0632 /* Akakce Case Study */,
+				2392A8E92C5A8ED0000C0632 /* Akakce Case StudyTests */,
+				2392A8F32C5A8ED0000C0632 /* Akakce Case StudyUITests */,
+				2392A8D12C5A8ECF000C0632 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2392A8D12C5A8ECF000C0632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2392A8D02C5A8ECF000C0632 /* Akakce Case Study.app */,
+				2392A8E62C5A8ED0000C0632 /* Akakce Case StudyTests.xctest */,
+				2392A8F02C5A8ED0000C0632 /* Akakce Case StudyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2392A8D22C5A8ECF000C0632 /* Akakce Case Study */ = {
+			isa = PBXGroup;
+			children = (
+				2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */,
+				2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */,
+				2392A8D72C5A8ECF000C0632 /* ViewController.swift */,
+				2392A8D92C5A8ECF000C0632 /* Main.storyboard */,
+				2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */,
+				2392A8DE2C5A8ED0000C0632 /* LaunchScreen.storyboard */,
+				2392A8E12C5A8ED0000C0632 /* Info.plist */,
+			);
+			path = "Akakce Case Study";
+			sourceTree = "<group>";
+		};
+		2392A8E92C5A8ED0000C0632 /* Akakce Case StudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */,
+			);
+			path = "Akakce Case StudyTests";
+			sourceTree = "<group>";
+		};
+		2392A8F32C5A8ED0000C0632 /* Akakce Case StudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2392A8F42C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift */,
+				2392A8F62C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift */,
+			);
+			path = "Akakce Case StudyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2392A8CF2C5A8ECF000C0632 /* Akakce Case Study */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2392A8FA2C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case Study" */;
+			buildPhases = (
+				2392A8CC2C5A8ECF000C0632 /* Sources */,
+				2392A8CD2C5A8ECF000C0632 /* Frameworks */,
+				2392A8CE2C5A8ECF000C0632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Akakce Case Study";
+			productName = "Akakce Case Study";
+			productReference = 2392A8D02C5A8ECF000C0632 /* Akakce Case Study.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2392A8E52C5A8ED0000C0632 /* Akakce Case StudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2392A8FD2C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case StudyTests" */;
+			buildPhases = (
+				2392A8E22C5A8ED0000C0632 /* Sources */,
+				2392A8E32C5A8ED0000C0632 /* Frameworks */,
+				2392A8E42C5A8ED0000C0632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2392A8E82C5A8ED0000C0632 /* PBXTargetDependency */,
+			);
+			name = "Akakce Case StudyTests";
+			productName = "Akakce Case StudyTests";
+			productReference = 2392A8E62C5A8ED0000C0632 /* Akakce Case StudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2392A8EF2C5A8ED0000C0632 /* Akakce Case StudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2392A9002C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case StudyUITests" */;
+			buildPhases = (
+				2392A8EC2C5A8ED0000C0632 /* Sources */,
+				2392A8ED2C5A8ED0000C0632 /* Frameworks */,
+				2392A8EE2C5A8ED0000C0632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2392A8F22C5A8ED0000C0632 /* PBXTargetDependency */,
+			);
+			name = "Akakce Case StudyUITests";
+			productName = "Akakce Case StudyUITests";
+			productReference = 2392A8F02C5A8ED0000C0632 /* Akakce Case StudyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2392A8C82C5A8ECF000C0632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					2392A8CF2C5A8ECF000C0632 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					2392A8E52C5A8ED0000C0632 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2392A8CF2C5A8ECF000C0632;
+					};
+					2392A8EF2C5A8ED0000C0632 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2392A8CF2C5A8ECF000C0632;
+					};
+				};
+			};
+			buildConfigurationList = 2392A8CB2C5A8ECF000C0632 /* Build configuration list for PBXProject "Akakce Case Study" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2392A8C72C5A8ECF000C0632;
+			productRefGroup = 2392A8D12C5A8ECF000C0632 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2392A8CF2C5A8ECF000C0632 /* Akakce Case Study */,
+				2392A8E52C5A8ED0000C0632 /* Akakce Case StudyTests */,
+				2392A8EF2C5A8ED0000C0632 /* Akakce Case StudyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2392A8CE2C5A8ECF000C0632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2392A8DD2C5A8ED0000C0632 /* Assets.xcassets in Resources */,
+				2392A8E02C5A8ED0000C0632 /* Base in Resources */,
+				2392A8DB2C5A8ECF000C0632 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8E42C5A8ED0000C0632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8EE2C5A8ED0000C0632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2392A8CC2C5A8ECF000C0632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */,
+				2392A8D42C5A8ECF000C0632 /* AppDelegate.swift in Sources */,
+				2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8E22C5A8ED0000C0632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2392A8EB2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2392A8EC2C5A8ED0000C0632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2392A8F72C5A8ED0000C0632 /* Akakce_Case_StudyUITestsLaunchTests.swift in Sources */,
+				2392A8F52C5A8ED0000C0632 /* Akakce_Case_StudyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2392A8E82C5A8ED0000C0632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2392A8CF2C5A8ECF000C0632 /* Akakce Case Study */;
+			targetProxy = 2392A8E72C5A8ED0000C0632 /* PBXContainerItemProxy */;
+		};
+		2392A8F22C5A8ED0000C0632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2392A8CF2C5A8ECF000C0632 /* Akakce Case Study */;
+			targetProxy = 2392A8F12C5A8ED0000C0632 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2392A8D92C5A8ECF000C0632 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2392A8DA2C5A8ECF000C0632 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2392A8DE2C5A8ED0000C0632 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2392A8DF2C5A8ED0000C0632 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2392A8F82C5A8ED0000C0632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2392A8F92C5A8ED0000C0632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2392A8FB2C5A8ED0000C0632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2392A8FC2C5A8ED0000C0632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2392A8FE2C5A8ED0000C0632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-StudyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Akakce Case Study.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Akakce Case Study";
+			};
+			name = Debug;
+		};
+		2392A8FF2C5A8ED0000C0632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-StudyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Akakce Case Study.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Akakce Case Study";
+			};
+			name = Release;
+		};
+		2392A9012C5A8ED0000C0632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-StudyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Akakce Case Study";
+			};
+			name = Debug;
+		};
+		2392A9022C5A8ED0000C0632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-StudyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Akakce Case Study";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2392A8CB2C5A8ECF000C0632 /* Build configuration list for PBXProject "Akakce Case Study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2392A8F82C5A8ED0000C0632 /* Debug */,
+				2392A8F92C5A8ED0000C0632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2392A8FA2C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case Study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2392A8FB2C5A8ED0000C0632 /* Debug */,
+				2392A8FC2C5A8ED0000C0632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2392A8FD2C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case StudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2392A8FE2C5A8ED0000C0632 /* Debug */,
+				2392A8FF2C5A8ED0000C0632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2392A9002C5A8ED0000C0632 /* Build configuration list for PBXNativeTarget "Akakce Case StudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2392A9012C5A8ED0000C0632 /* Debug */,
+				2392A9022C5A8ED0000C0632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2392A8C82C5A8ECF000C0632 /* Project object */;
+}
