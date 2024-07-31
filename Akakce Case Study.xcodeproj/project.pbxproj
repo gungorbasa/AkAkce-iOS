@@ -10,7 +10,6 @@
 		2392A8D42C5A8ECF000C0632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */; };
 		2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */; };
 		2392A8D82C5A8ECF000C0632 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8D72C5A8ECF000C0632 /* ViewController.swift */; };
-		2392A8DB2C5A8ECF000C0632 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DA2C5A8ECF000C0632 /* Base */; };
 		2392A8DD2C5A8ED0000C0632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */; };
 		2392A8E02C5A8ED0000C0632 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2392A8DF2C5A8ED0000C0632 /* Base */; };
 		2392A8EB2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */; };
@@ -40,7 +39,6 @@
 		2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2392A8D72C5A8ECF000C0632 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2392A8DA2C5A8ECF000C0632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2392A8DF2C5A8ED0000C0632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2392A8E12C5A8ED0000C0632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				2392A8D32C5A8ECF000C0632 /* AppDelegate.swift */,
 				2392A8D52C5A8ECF000C0632 /* SceneDelegate.swift */,
 				2392A8D72C5A8ECF000C0632 /* ViewController.swift */,
-				2392A8D92C5A8ECF000C0632 /* Main.storyboard */,
 				2392A8DC2C5A8ED0000C0632 /* Assets.xcassets */,
 				2392A8DE2C5A8ED0000C0632 /* LaunchScreen.storyboard */,
 				2392A8E12C5A8ED0000C0632 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				2392A8DD2C5A8ED0000C0632 /* Assets.xcassets in Resources */,
 				2392A8E02C5A8ED0000C0632 /* Base in Resources */,
-				2392A8DB2C5A8ECF000C0632 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2392A8D92C5A8ECF000C0632 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2392A8DA2C5A8ECF000C0632 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2392A8DE2C5A8ED0000C0632 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,6 +430,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 456T4LX972;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 456T4LX972;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Akakce Case Study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,6 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gungorbasa.Akakce-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
