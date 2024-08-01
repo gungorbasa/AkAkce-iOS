@@ -7,8 +7,9 @@
 
 import UIKit
 
-final class ProductListHeaderCell: UICollectionViewCell {
-    struct State: Equatable {
+final class ProductListHeaderCell: UICollectionViewCell, Reusable {
+    struct State: Identifiable, Equatable, Hashable {
+        let id: Int
         let image: String
         let title: String
         let price: Double
