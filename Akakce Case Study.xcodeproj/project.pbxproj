@@ -32,6 +32,9 @@
 		2392A92A2C5B5918000C0632 /* ProductListHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9292C5B5918000C0632 /* ProductListHeaderCell.swift */; };
 		2392A92C2C5B747B000C0632 /* PageControlFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A92B2C5B747B000C0632 /* PageControlFooterView.swift */; };
 		2392A92E2C5B76AD000C0632 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A92D2C5B76AD000C0632 /* UICollectionView.swift */; };
+		2392A9312C5B8E83000C0632 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A9302C5B8E83000C0632 /* Nuke */; };
+		2392A9332C5B8E83000C0632 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A9322C5B8E83000C0632 /* NukeExtensions */; };
+		2392A9352C5B8E83000C0632 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A9342C5B8E83000C0632 /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2392A90B2C5A94C9000C0632 /* Networking in Frameworks */,
+				2392A9312C5B8E83000C0632 /* Nuke in Frameworks */,
+				2392A9332C5B8E83000C0632 /* NukeExtensions in Frameworks */,
+				2392A9352C5B8E83000C0632 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +262,9 @@
 			name = "Akakce Case Study";
 			packageProductDependencies = (
 				2392A90A2C5A94C9000C0632 /* Networking */,
+				2392A9302C5B8E83000C0632 /* Nuke */,
+				2392A9322C5B8E83000C0632 /* NukeExtensions */,
+				2392A9342C5B8E83000C0632 /* NukeUI */,
 			);
 			productName = "Akakce Case Study";
 			productReference = 2392A8D02C5A8ECF000C0632 /* Akakce Case Study.app */;
@@ -331,6 +340,7 @@
 			mainGroup = 2392A8C72C5A8ECF000C0632;
 			packageReferences = (
 				2392A9092C5A94C9000C0632 /* XCRemoteSwiftPackageReference "Networking" */,
+				2392A92F2C5B8E83000C0632 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 2392A8D12C5A8ECF000C0632 /* Products */;
 			projectDirPath = "";
@@ -745,6 +755,14 @@
 				minimumVersion = 0.2.6;
 			};
 		};
+		2392A92F2C5B8E83000C0632 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -752,6 +770,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2392A9092C5A94C9000C0632 /* XCRemoteSwiftPackageReference "Networking" */;
 			productName = Networking;
+		};
+		2392A9302C5B8E83000C0632 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2392A92F2C5B8E83000C0632 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		2392A9322C5B8E83000C0632 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2392A92F2C5B8E83000C0632 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		2392A9342C5B8E83000C0632 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2392A92F2C5B8E83000C0632 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

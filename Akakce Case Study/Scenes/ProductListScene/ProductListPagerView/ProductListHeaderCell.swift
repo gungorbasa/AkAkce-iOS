@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NukeUI
 
 final class ProductListHeaderCell: UICollectionViewCell, Reusable {
     struct State: Identifiable, Equatable, Hashable {
@@ -20,7 +21,7 @@ final class ProductListHeaderCell: UICollectionViewCell, Reusable {
     private let horizontalStackView = UIStackView.autolayoutView(axis: .horizontal)
     private let titleLabel = UILabel.autolayoutView()
     private let priceLabel = UILabel.autolayoutView()
-    private let imageView = UIImageView.autolayoutView()
+    private let imageView = LazyImageView.autolayoutView()
     private let verticalStackView = UIStackView.autolayoutView(axis: .vertical)
     
     override init(frame: CGRect) {
@@ -33,8 +34,15 @@ final class ProductListHeaderCell: UICollectionViewCell, Reusable {
         setup()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = ""
+        priceLabel.text = ""
+        imageView.cancel()
+    }
+    
     func configure(with state: State) {
-        // TODO: Setup ImageView with caching
+        imageView.url = URL(string: state.image)
         titleLabel.text = state.title
         priceLabel.text = state.formattedPrice
     }
@@ -52,10 +60,10 @@ private extension ProductListHeaderCell {
         
         NSLayoutConstraint.activate(
             [
-                horizontalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-                horizontalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-                horizontalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                horizontalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+                horizontalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+                horizontalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+                horizontalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+                horizontalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
             ]
         )
     }
@@ -68,6 +76,7 @@ private extension ProductListHeaderCell {
     }
     
     func setupImageView() {
+        imageView.imageView.contentMode = .scaleAspectFit
         NSLayoutConstraint.activate(
             [
                 imageView.widthAnchor.constraint(equalTo: horizontalStackView.widthAnchor, multiplier: 0.35),
