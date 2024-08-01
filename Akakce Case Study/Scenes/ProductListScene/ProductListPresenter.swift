@@ -26,7 +26,7 @@ final class ProductListPresenterImp: ProductListPresenter {
         Task {
             do {
                 let (products, horizontalProducts) =  try await fetchData()
-                let items = horizontalProducts.map {
+                let horizontalItems = horizontalProducts.map {
                     ProductListHeaderCell.State(
                         id: $0.id,
                         image: $0.image,
@@ -34,7 +34,18 @@ final class ProductListPresenterImp: ProductListPresenter {
                         price: $0.price
                     )
                 }
-                view?.apply(action: .horizontalProducts(items))
+                
+                let items = products.map {
+                    ProductListCollectionViewCell.State(
+                        id: $0.id,
+                        image: $0.image,
+                        title: $0.title,
+                        price: $0.price,
+                        amountLeft: $0.rating.count // Decided to use this field for amount left
+                    )
+                }
+                view?.apply(action: .horizontalProducts(horizontalItems))
+                view?.apply(action: .products(items))
             } catch {
                 print("Error: \(error.localizedDescription)")
             }

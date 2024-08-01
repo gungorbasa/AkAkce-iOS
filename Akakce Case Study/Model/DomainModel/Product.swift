@@ -15,4 +15,5 @@ struct Product: Equatable {
     let category: Category?
     let image: String
     let rating: Rating
+    let amountLeft: Int
 }

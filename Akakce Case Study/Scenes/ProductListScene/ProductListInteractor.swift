@@ -38,7 +38,8 @@ final class ProductListInteractorImp: ProductListInteractor {
             description: networkModel.description,
             category: Category(rawValue: networkModel.category),
             image: networkModel.image,
-            rating: Rating(rate: networkModel.rating.rate, count: networkModel.rating.count)
+            rating: Rating(rate: networkModel.rating.rate, count: networkModel.rating.count), 
+            amountLeft: networkModel.rating.count
         )
     }
 }

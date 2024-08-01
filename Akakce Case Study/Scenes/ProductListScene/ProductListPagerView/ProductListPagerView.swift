@@ -67,7 +67,6 @@ private extension ProductListPagerView {
     func setupCollectionView() {
         stackView.addArrangedSubview(collectionView)
         collectionView.register(cellType: ProductListHeaderCell.self)
-        collectionView.heightAnchor.constraint(equalToConstant: 250).isActive = true
         collectionView.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         dataSource = makeDataSource()
     }

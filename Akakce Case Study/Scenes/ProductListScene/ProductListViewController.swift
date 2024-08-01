@@ -9,7 +9,7 @@ import UIKit
 
 enum ProductListViewAction: Equatable, Sendable {
     case horizontalProducts([ProductListHeaderCell.State])
-    case products
+    case products([ProductListCollectionViewCell.State])
 }
 
 @MainActor
@@ -20,7 +20,9 @@ protocol ProductListView: AnyObject {
 final class ProductListViewController: UIViewController, ProductListView {
     private var presenter: ProductListPresenter
     
+    private let stackView = UIStackView.autolayoutView(axis: .vertical)
     private let horizontalPagerView = ProductListPagerView.autolayoutView()
+    private let productListCollectionView = ProductListCollectionView.autolayoutView()
     
     init(presenter: ProductListPresenter) {
         self.presenter = presenter
@@ -42,25 +44,26 @@ final class ProductListViewController: UIViewController, ProductListView {
         switch action {
         case .horizontalProducts(let items):
             horizontalPagerView.apply(items: items)
-        case .products:
-            break
+        case .products(let items):
+            productListCollectionView.apply(items: items)
         }
     }
 }
 
 private extension ProductListViewController {
     func setup() {
-        setupHorizontalPagerView()
-    }
-    
-    func setupHorizontalPagerView() {
-        view.addSubview(horizontalPagerView)
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(horizontalPagerView)
+        stackView.addArrangedSubview(productListCollectionView)
+        stackView.spacing = 16
         
         NSLayoutConstraint.activate([
-            horizontalPagerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            horizontalPagerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            horizontalPagerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            horizontalPagerView.heightAnchor.constraint(equalToConstant: 200)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            // Check this one
+            horizontalPagerView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
 }
