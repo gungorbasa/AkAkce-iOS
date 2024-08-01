@@ -21,8 +21,8 @@ struct ProductListRouterImp: ProductListRouter {
     
     func route(to: ProductListRoute) {
         switch to {
-        case .details:
-            let vc = UIViewController()
+        case .details(let id):
+            let vc = ProductDetailsBuilder.make(with: id)
             view.navigationController?.pushViewController(vc, animated: true)
         }
     }
