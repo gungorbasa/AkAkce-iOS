@@ -14,10 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadRocketSimConnect()
         return true
     }
 
     // MARK: UISceneSession Lifecycle
+    
+    private func loadRocketSimConnect() {
+#if DEBUG
+        guard (Bundle(path: "/Applications/RocketSim.app/Contents/Frameworks/RocketSimConnectLinker.nocache.framework")?.load() == true) else {
+            print("Failed to load linker framework")
+            return
+        }
+        print("RocketSim Connect successfully linked")
+#endif
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

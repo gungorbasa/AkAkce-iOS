@@ -14,7 +14,7 @@ final class ProductListHeaderCell: UICollectionViewCell, Reusable {
         let title: String
         let price: Double
         
-        var formattedPrice: String { String(format: "%.1f", price) + " TL" }
+        var formattedPrice: String { String(format: "%.2f", price) + " TL" }
     }
     
     private let horizontalStackView = UIStackView.autolayoutView(axis: .horizontal)
@@ -61,32 +61,35 @@ private extension ProductListHeaderCell {
     }
     
     func setupHorizontalStackView() {
+        horizontalStackView.alignment = .center
+        horizontalStackView.spacing = 16
         horizontalStackView.addArrangedSubview(imageView)
         horizontalStackView.addArrangedSubview(verticalStackView)
     }
     
     func setupImageView() {
-        imageView.backgroundColor = .white
-        
         NSLayoutConstraint.activate(
             [
-                imageView.heightAnchor.constraint(equalToConstant: 120),
-                imageView.widthAnchor.constraint(equalToConstant: 80)
+                imageView.widthAnchor.constraint(equalTo: horizontalStackView.widthAnchor, multiplier: 0.35),
+                imageView.heightAnchor.constraint(equalTo: horizontalStackView.heightAnchor)
             ]
         )
     }
     
     func setupVerticalStackView() {
+        verticalStackView.alignment = .leading
+        verticalStackView.spacing = 8
         verticalStackView.addArrangedSubview(titleLabel)
         verticalStackView.addArrangedSubview(priceLabel)
     }
     
     func setupTitleLabel() {
         titleLabel.textColor = .gray
+        titleLabel.numberOfLines = 3
     }
     
     func setupPriceLabel() {
         priceLabel.textColor = .black
-        priceLabel.font = .boldSystemFont(ofSize: 16)
+        priceLabel.font = .boldSystemFont(ofSize: 24)
     }
 }

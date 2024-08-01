@@ -12,8 +12,9 @@ final class ProductListPagerView: UIView {
     typealias Datasource = UICollectionViewDiffableDataSource<Int, ProductListHeaderCell.State>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, ProductListHeaderCell.State>
     
-    private let stackView = UIStackView.autolayoutView()
+    private let stackView = UIStackView.autolayoutView(axis: .vertical)
     private var pagerView = PageControlFooterView.autolayoutView()
+    private let footerView = PageControlFooterView.autolayoutView()
     private lazy var collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: makeCollectionViewLayout()
@@ -32,7 +33,7 @@ final class ProductListPagerView: UIView {
     }
     
     func apply(items: [ProductListHeaderCell.State]) {
-        addPagerFooterView(with: items.count)
+        footerView.configure(with: items.count)
         
         var snapshot = Snapshot()
         
@@ -46,11 +47,13 @@ private extension ProductListPagerView {
     func setup() {
         setupStackView()
         setupCollectionView()
+        setupFooterView()
     }
     
     func setupStackView() {
         addSubview(stackView)
-        
+        stackView.spacing = 8
+        stackView.alignment = .center
         NSLayoutConstraint.activate(
             [
                 stackView.topAnchor.constraint(equalTo: topAnchor),
@@ -64,19 +67,31 @@ private extension ProductListPagerView {
     func setupCollectionView() {
         stackView.addArrangedSubview(collectionView)
         collectionView.register(cellType: ProductListHeaderCell.self)
+        collectionView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        collectionView.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         dataSource = makeDataSource()
+    }
+    
+    func setupFooterView() {
+        stackView.addArrangedSubview(footerView)
+        footerView.subscribeTo(subject: pagingInfoSubject)
+        footerView.currentPageIndicatorTintColor = .cyan
+        footerView.pageIndicatorTintColor = .gray
+        
+        let heightAnchor = footerView.heightAnchor.constraint(equalToConstant: 20)
+        heightAnchor.priority = .defaultHigh
     }
     
     func makeCollectionViewLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(150)
+            heightDimension: .fractionalHeight(1.0)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(150)
+            heightDimension: .fractionalHeight(1.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         let section = makeSection(from: group)
@@ -109,29 +124,5 @@ private extension ProductListPagerView {
         })
         
         return dataSource
-    }
-    
-    func makeFooterView() -> NSCollectionLayoutBoundarySupplementaryItem {
-        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(20))
-        return NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: footerSize,
-            elementKind: UICollectionView.elementKindSectionFooter,
-            alignment: .bottom
-        )
-    }
-    
-    func addPagerFooterView(with itemCount: Int) {
-        pagerView.removeFromSuperview()
-        
-        let footer = PageControlFooterView.autolayoutView()
-        stackView.addArrangedSubview(footer)
-        let heightAnchor = footer.heightAnchor.constraint(equalToConstant: 20)
-        heightAnchor.priority = .defaultHigh
-        heightAnchor.isActive = true
-        
-        footer.configure(with: itemCount)
-        footer.subscribeTo(subject: pagingInfoSubject)
-        
-        pagerView = footer
     }
 }

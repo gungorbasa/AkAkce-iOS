@@ -12,19 +12,29 @@ protocol ProductListPresenter: Sendable {
     func onViewDidLoad()
 }
 
+@MainActor
 final class ProductListPresenterImp: ProductListPresenter {
     private let interactor: ProductListInteractor
+    
+    weak var view: ProductListView?
     
     init(interactor: ProductListInteractor) {
         self.interactor = interactor
     }
     
-    @MainActor
     func onViewDidLoad() {
         Task {
             do {
                 let (products, horizontalProducts) =  try await fetchData()
-                print(horizontalProducts)
+                let items = horizontalProducts.map {
+                    ProductListHeaderCell.State(
+                        id: $0.id,
+                        image: $0.image,
+                        title: $0.title,
+                        price: $0.price
+                    )
+                }
+                view?.apply(action: .horizontalProducts(items))
             } catch {
                 print("Error: \(error.localizedDescription)")
             }

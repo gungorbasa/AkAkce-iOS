@@ -29,7 +29,7 @@ enum ProductRoutes: Routing {
         case .product:
             return [:]
         case .horizontalProduct:
-            return ["limit": 5]
+            return ["limit": "5"]
         case .productDetails:
             return [:]
         }
