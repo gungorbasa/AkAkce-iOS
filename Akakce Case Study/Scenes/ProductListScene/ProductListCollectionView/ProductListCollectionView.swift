@@ -18,6 +18,8 @@ final class ProductListCollectionView: UIView {
     
     private var dataSource: Datasource?
     
+    var onTapItem: ((ProductListCollectionViewCell.State) -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -41,6 +43,7 @@ private extension ProductListCollectionView {
     func setup() {
         addSubview(collectionView)
         collectionView.register(cellType: ProductListCollectionViewCell.self)
+        collectionView.delegate = self
         dataSource = makeDataSource()
         
         NSLayoutConstraint.activate(
@@ -86,5 +89,12 @@ private extension ProductListCollectionView {
         })
         
         return dataSource
+    }
+}
+
+extension ProductListCollectionView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = dataSource?.itemIdentifier(for: indexPath) else { return }
+        onTapItem?(item)
     }
 }

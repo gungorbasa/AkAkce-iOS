@@ -55,6 +55,17 @@ private extension ProductListViewController {
         view.addSubview(stackView)
         stackView.addArrangedSubview(horizontalPagerView)
         stackView.addArrangedSubview(productListCollectionView)
+        
+        productListCollectionView.onTapItem = { [weak self] state in
+            guard let self else { return }
+            self.presenter.onTapProductCollectionViewCell(item: state)
+        }
+        
+        horizontalPagerView.onTapItem = { [weak self] state in
+            guard let self else { return }
+            self.presenter.onTapProductListHeaderCell(item: state)
+        }
+        
         stackView.spacing = 16
         
         NSLayoutConstraint.activate([
@@ -62,7 +73,6 @@ private extension ProductListViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            // Check this one
             horizontalPagerView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }

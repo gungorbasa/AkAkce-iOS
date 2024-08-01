@@ -23,6 +23,8 @@ final class ProductListPagerView: UIView {
     private var dataSource: Datasource?
     private let pagingInfoSubject = PassthroughSubject<PageControlFooterView.PagingInfo, Never>()
     
+    var onTapItem: ((ProductListHeaderCell.State) -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -67,6 +69,7 @@ private extension ProductListPagerView {
     func setupCollectionView() {
         stackView.addArrangedSubview(collectionView)
         collectionView.register(cellType: ProductListHeaderCell.self)
+        collectionView.delegate = self
         collectionView.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         dataSource = makeDataSource()
     }
@@ -123,5 +126,12 @@ private extension ProductListPagerView {
         })
         
         return dataSource
+    }
+}
+
+extension ProductListPagerView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = dataSource?.itemIdentifier(for: indexPath) else { return }
+        onTapItem?(item)
     }
 }

@@ -16,7 +16,9 @@ enum ProductListBuilder {
         let interactor = ProductListInteractorImp(service: service)
         let presenter = ProductListPresenterImp(interactor: interactor)
         let view = ProductListViewController(presenter: presenter)
+        let router = ProductListRouterImp(view: view)
         presenter.view = view
+        presenter.router = router
         return view
     }
 }

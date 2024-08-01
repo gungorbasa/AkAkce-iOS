@@ -10,6 +10,12 @@ import Foundation
 protocol ProductListPresenter: Sendable {
     @MainActor
     func onViewDidLoad()
+    
+    @MainActor
+    func onTapProductCollectionViewCell(item: ProductListCollectionViewCell.State)
+    
+    @MainActor
+    func onTapProductListHeaderCell(item: ProductListHeaderCell.State)
 }
 
 @MainActor
@@ -17,6 +23,7 @@ final class ProductListPresenterImp: ProductListPresenter {
     private let interactor: ProductListInteractor
     
     weak var view: ProductListView?
+    var router: ProductListRouter?
     
     init(interactor: ProductListInteractor) {
         self.interactor = interactor
@@ -50,6 +57,14 @@ final class ProductListPresenterImp: ProductListPresenter {
                 print("Error: \(error.localizedDescription)")
             }
         }
+    }
+    
+    func onTapProductListHeaderCell(item: ProductListHeaderCell.State) {
+        router?.route(to: .details(id: item.id))
+    }
+    
+    func onTapProductCollectionViewCell(item: ProductListCollectionViewCell.State) {
+        router?.route(to: .details(id: item.id))
     }
 }
 

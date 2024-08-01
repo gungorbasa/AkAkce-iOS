@@ -37,6 +37,7 @@
 		2392A9352C5B8E83000C0632 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A9342C5B8E83000C0632 /* NukeUI */; };
 		2392A93A2C5B9616000C0632 /* ProductListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9392C5B9616000C0632 /* ProductListCollectionView.swift */; };
 		2392A93C2C5B9AE6000C0632 /* ProductListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A93B2C5B9AE6000C0632 /* ProductListCollectionViewCell.swift */; };
+		2392A93E2C5BB9D8000C0632 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A93D2C5BB9D8000C0632 /* ProductListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		2392A92D2C5B76AD000C0632 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		2392A9392C5B9616000C0632 /* ProductListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionView.swift; sourceTree = "<group>"; };
 		2392A93B2C5B9AE6000C0632 /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
+		2392A93D2C5BB9D8000C0632 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				2392A9072C5A8FE6000C0632 /* ProductListBuilder.swift */,
 				2392A90C2C5A9AAC000C0632 /* ProductListInteractor.swift */,
 				2392A9212C5AAA89000C0632 /* ProductListPresenter.swift */,
+				2392A93D2C5BB9D8000C0632 /* ProductListRouter.swift */,
 				2392A9152C5A9C19000C0632 /* ProductListService.swift */,
 				2392A9052C5A8FCB000C0632 /* ProductListViewController.swift */,
 				2392A9382C5B95E9000C0632 /* ProductListCollectionView */,
@@ -412,6 +415,7 @@
 				2392A8D62C5A8ECF000C0632 /* SceneDelegate.swift in Sources */,
 				2392A9222C5AAA89000C0632 /* ProductListPresenter.swift in Sources */,
 				2392A9082C5A8FE6000C0632 /* ProductListBuilder.swift in Sources */,
+				2392A93E2C5BB9D8000C0632 /* ProductListRouter.swift in Sources */,
 				2392A92A2C5B5918000C0632 /* ProductListHeaderCell.swift in Sources */,
 				2392A92C2C5B747B000C0632 /* PageControlFooterView.swift in Sources */,
 				2392A91C2C5A9F0E000C0632 /* Category.swift in Sources */,
