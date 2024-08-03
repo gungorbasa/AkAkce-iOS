@@ -38,7 +38,6 @@ final class ProductDetailsPresenterImp: ProductDetailsPresenter {
                     )
                 )
             )
-            print(product)
         }
     }
 }
