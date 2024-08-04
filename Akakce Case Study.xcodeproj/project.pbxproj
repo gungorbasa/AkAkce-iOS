@@ -45,6 +45,10 @@
 		2392A9492C5BBD50000C0632 /* ProductDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A9482C5BBD50000C0632 /* ProductDetailsService.swift */; };
 		2392A94B2C5BC1C3000C0632 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392A94A2C5BC1C3000C0632 /* ProductDetailsView.swift */; };
 		2392A9582C5BD58D000C0632 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 2392A9572C5BD58D000C0632 /* Cosmos */; };
+		23E6DC962C5FF18B00F3714E /* ProductDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6DC952C5FF18B00F3714E /* ProductDetailsInteractorTests.swift */; };
+		23E6DC992C5FF1F200F3714E /* ProductListServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6DC982C5FF1F200F3714E /* ProductListServiceMock.swift */; };
+		23E6DC9B2C5FF33100F3714E /* ProductNetworkMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6DC9A2C5FF33100F3714E /* ProductNetworkMocks.swift */; };
+		23E6DC9D2C5FF52F00F3714E /* ProductModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6DC9C2C5FF52F00F3714E /* ProductModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,10 @@
 		2392A9462C5BBCE7000C0632 /* ProductDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsInteractor.swift; sourceTree = "<group>"; };
 		2392A9482C5BBD50000C0632 /* ProductDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsService.swift; sourceTree = "<group>"; };
 		2392A94A2C5BC1C3000C0632 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		23E6DC952C5FF18B00F3714E /* ProductDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		23E6DC982C5FF1F200F3714E /* ProductListServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListServiceMock.swift; sourceTree = "<group>"; };
+		23E6DC9A2C5FF33100F3714E /* ProductNetworkMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkMocks.swift; sourceTree = "<group>"; };
+		23E6DC9C2C5FF52F00F3714E /* ProductModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +182,9 @@
 		2392A8E92C5A8ED0000C0632 /* Akakce Case StudyTests */ = {
 			isa = PBXGroup;
 			children = (
+				23E6DC972C5FF1E000F3714E /* Mocks */,
 				2392A8EA2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift */,
+				23E6DC952C5FF18B00F3714E /* ProductDetailsInteractorTests.swift */,
 			);
 			path = "Akakce Case StudyTests";
 			sourceTree = "<group>";
@@ -217,6 +227,7 @@
 			children = (
 				2392A91A2C5A9EEE000C0632 /* DomainModel */,
 				2392A90F2C5A9AE7000C0632 /* NetworkModel */,
+				23E6DC9C2C5FF52F00F3714E /* ProductModelFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +298,15 @@
 				2392A94A2C5BC1C3000C0632 /* ProductDetailsView.swift */,
 			);
 			path = ProductDetailsScene;
+			sourceTree = "<group>";
+		};
+		23E6DC972C5FF1E000F3714E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				23E6DC982C5FF1F200F3714E /* ProductListServiceMock.swift */,
+				23E6DC9A2C5FF33100F3714E /* ProductNetworkMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +454,7 @@
 				2392A9282C5B56F0000C0632 /* UIView.swift in Sources */,
 				2392A9492C5BBD50000C0632 /* ProductDetailsService.swift in Sources */,
 				2392A91E2C5AA004000C0632 /* Rating.swift in Sources */,
+				23E6DC9D2C5FF52F00F3714E /* ProductModelFactory.swift in Sources */,
 				2392A9162C5A9C19000C0632 /* ProductListService.swift in Sources */,
 				2392A9112C5A9B0F000C0632 /* ProductNetworkModel.swift in Sources */,
 				2392A93A2C5B9616000C0632 /* ProductListCollectionView.swift in Sources */,
@@ -466,7 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E6DC9B2C5FF33100F3714E /* ProductNetworkMocks.swift in Sources */,
 				2392A8EB2C5A8ED0000C0632 /* Akakce_Case_StudyTests.swift in Sources */,
+				23E6DC962C5FF18B00F3714E /* ProductDetailsInteractorTests.swift in Sources */,
+				23E6DC992C5FF1F200F3714E /* ProductListServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,31 +15,23 @@ protocol ProductListInteractor: Sendable {
 
 final class ProductListInteractorImp: ProductListInteractor {
     private let service: ProductListService
+    private let productModelFactory: ProductModelFactory
     
-    init(service: ProductListService) {
+    init(
+        service: ProductListService,
+        productModelFactory: ProductModelFactory = ProductModelFactoryImp()
+    ) {
         self.service = service
+        self.productModelFactory = productModelFactory
     }
     
     func fetchProducts() async throws -> [Product] {
         let products = try await service.fetchProducts()
-        return products.map { makeProduct(from: $0) }
+        return productModelFactory.make(from: products)
     }
     
     func fetchHorizontalProducts() async throws -> [Product] {
         let products = try await service.fetchHorizontalProducts()
-        return products.map { makeProduct(from: $0) }
-    }
-    
-    private func makeProduct(from networkModel: ProductNetworkModel) -> Product {
-        Product(
-            id: networkModel.id,
-            title: networkModel.title,
-            price: networkModel.price,
-            description: networkModel.description,
-            category: Category(rawValue: networkModel.category),
-            image: networkModel.image,
-            rating: Rating(rate: networkModel.rating.rate, count: networkModel.rating.count), 
-            amountLeft: networkModel.rating.count
-        )
+        return productModelFactory.make(from: products)
     }
 }

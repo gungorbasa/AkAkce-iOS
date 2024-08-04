@@ -13,22 +13,18 @@ protocol ProductDetailsInteractor: Actor {
 
 actor ProductDetailsInteractorImp: ProductDetailsInteractor {
     private let service: ProductDetailsService
+    private let productModelFactory: ProductModelFactory
     
-    init(service: ProductDetailsService) {
+    init(
+        service: ProductDetailsService,
+        productModelFactory: ProductModelFactory = ProductModelFactoryImp()
+    ) {
         self.service = service
+        self.productModelFactory = productModelFactory
     }
     
     func fetchProductDetails(by id: Int) async throws -> Product {
         let networkProduct = try await service.fetchProductDetails(by: id)
-        return Product(
-            id: networkProduct.id,
-            title: networkProduct.title,
-            price: networkProduct.price,
-            description: networkProduct.description,
-            category: Category(rawValue: networkProduct.category),
-            image: networkProduct.image,
-            rating: .init(rate: networkProduct.rating.rate, count: networkProduct.rating.count),
-            amountLeft: networkProduct.rating.count
-        )
+        return productModelFactory.make(from: networkProduct)
     }
 }
