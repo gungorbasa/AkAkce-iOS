@@ -1,5 +1,5 @@
 //
-//  ProductRoutes.swift
+//  ProductEndpoints.swift
 //  Akakce Case Study
 //
 //  Created by Gungor Basa on 7/31/24.
@@ -8,7 +8,7 @@
 import Foundation
 import Networking
 
-enum ProductRoutes: Routing {
+enum ProductEndpoints: Routing {
     var host: String { "https://fakestoreapi.com" }
     
     var path: String {

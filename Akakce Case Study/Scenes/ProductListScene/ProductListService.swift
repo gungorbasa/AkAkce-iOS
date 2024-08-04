@@ -21,10 +21,10 @@ actor ProductListServiceImp: ProductListService {
     }
     
     func fetchProducts() async throws -> [ProductNetworkModel] {
-        try await network.run(ProductRoutes.product)
+        try await network.run(ProductEndpoints.product)
     }
     
     func fetchHorizontalProducts() async throws -> [ProductNetworkModel] {
-        try await network.run(ProductRoutes.horizontalProduct)
+        try await network.run(ProductEndpoints.horizontalProduct)
     }
 }

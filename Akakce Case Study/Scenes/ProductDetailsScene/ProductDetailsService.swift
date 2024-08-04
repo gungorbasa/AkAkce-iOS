@@ -20,6 +20,6 @@ actor ProductDetailsServiceImp: ProductDetailsService {
     }
     
     func fetchProductDetails(by id: Int) async throws -> ProductNetworkModel {
-        try await networking.run(ProductRoutes.productDetails(id: "\(id)"))
+        try await networking.run(ProductEndpoints.productDetails(id: "\(id)"))
     }
 }
