@@ -30,7 +30,7 @@ final class ProductListServiceTests: XCTestCase {
         )
     ]
     
-    func testFetchProducts() async throws {
+    func test_fetch_products() async throws {
         let networkingMock = NetworkingMock(expectedResult: expectedProducts)
         let service = ProductListServiceImp(network: networkingMock)
         
@@ -42,7 +42,7 @@ final class ProductListServiceTests: XCTestCase {
         XCTAssertEqual(calledPaths, expectedPaths)
     }
     
-    func testFetchHorizontalProducts() async throws {
+    func test_fetch_horizontal_products() async throws {
         let networkingMock = NetworkingMock(expectedResult: expectedProducts)
         let service = ProductListServiceImp(network: networkingMock)
         
@@ -54,7 +54,7 @@ final class ProductListServiceTests: XCTestCase {
         XCTAssertEqual(calledPaths, expectedPaths)
     }
     
-    func testFetchProductsThrowsError() async throws {
+    func test_fetch_products_throws_error() async throws {
         struct TestError: Error {}
         let networkingMock = NetworkingMock(expectedError: TestError())
         let service = ProductListServiceImp(network: networkingMock)
@@ -67,7 +67,7 @@ final class ProductListServiceTests: XCTestCase {
         }
     }
     
-    func testFetchHorizontalProductsThrowsError() async throws {
+    func test_fetch_horizontal_products_throws_error() async throws {
         struct TestError: Error {}
         let networkingMock = NetworkingMock(expectedError: TestError())
         let service = ProductListServiceImp(network: networkingMock)

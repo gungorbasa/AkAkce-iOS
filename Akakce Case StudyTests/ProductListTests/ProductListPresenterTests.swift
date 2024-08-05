@@ -33,7 +33,7 @@ final class ProductListPresenterTests: XCTestCase {
     ]
     
     @MainActor
-    func testOnViewDidLoad() async throws {
+    func test_on_view_did_load() async throws {
         let products = productMocks
         let horizontalProducts = [productMocks.first!]
         let interactorMock = ProductListInteractorMock(products: products, horizontalProducts: horizontalProducts)
@@ -66,7 +66,7 @@ final class ProductListPresenterTests: XCTestCase {
     }
     
     @MainActor
-    func testOnTapProductCollectionViewCell() async throws {
+    func test_on_tap_product_collection_view_cell() async throws {
         let interactorMock = ProductListInteractorMock(products: [], horizontalProducts: [])
         let viewMock = ProductListViewMock()
         let routerMock = ProductListRouterMock()
@@ -94,7 +94,7 @@ final class ProductListPresenterTests: XCTestCase {
     }
     
     @MainActor
-    func testOnTapProductListHeaderCell() {
+    func test_on_tap_product_list_header_cell() {
         let interactorMock = ProductListInteractorMock(products: [], horizontalProducts: [])
         let viewMock = ProductListViewMock()
         let routerMock = ProductListRouterMock()
