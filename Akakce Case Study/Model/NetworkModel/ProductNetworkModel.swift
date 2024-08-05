@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductNetworkModel: Codable {
+struct ProductNetworkModel: Codable, Equatable {
     let id: Int
     let title: String
     let price: Double

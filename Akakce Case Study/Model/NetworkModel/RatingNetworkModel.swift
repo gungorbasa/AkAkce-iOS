@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RatingNetworkModel: Codable {
+struct RatingNetworkModel: Codable, Equatable {
     let rate: Double
     let count: Int
 }
